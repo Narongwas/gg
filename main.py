@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from googletrans import Translator
 import discord
 from keep_alive import keep_alive
+from dotenv import load_dotenv,find_dotenv
 
 
 message_lastseen = datetime.now()
@@ -13,8 +14,6 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
-
-
 
 Token = os.environ.get('TOKEN')
 
