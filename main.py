@@ -16,7 +16,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 load_dotenv(find_dotenv())
 
-Token = BOT(os.getenv('TOKEN'))
+Token = os.getenv('TOKEN')
 
 @bot.event
 async def on_ready():
