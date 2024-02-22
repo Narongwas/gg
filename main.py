@@ -4,9 +4,9 @@ from datetime import datetime, timedelta
 from googletrans import Translator
 import discord
 from keep_alive import keep_alive
-from dotenv import load_dotenv,find_dotenv
+from dotenv import load_dotenv
 
-load_dotenv(find_dotenv())
+load_dotenv()
 
 message_lastseen = datetime.now()
 message2_lastseen = datetime.now()
