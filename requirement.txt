@@ -1,0 +1,3 @@
+flask
+googletrans==3.0.0
+discord.py
