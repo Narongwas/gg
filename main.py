@@ -12,7 +12,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-Token='MTA0NDQ5NTgwODI5ODQ4Mzc4NA.GljaMp.6DphzeJrks7WlN_lbE8UnG0JPfsAVCzkdG6Xjs'
+Token='MTA0NDQ5NTgwODI5ODQ4Mzc4NA.GdW-Xe.e9q-6jTkS4yYWbWv0SFOHIxv-chfOosVZjPnX0'
 
 @bot.event
 async def on_ready():
