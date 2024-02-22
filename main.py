@@ -1,3 +1,4 @@
+import os
 from discord.ext import commands
 from datetime import datetime, timedelta
 from googletrans import Translator
@@ -12,7 +13,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-Token='MTA0NDQ5NTgwODI5ODQ4Mzc4NA.GdW-Xe.e9q-6jTkS4yYWbWv0SFOHIxv-chfOosVZjPnX0'
+Token = os.getenv('DISCORD_TOKEN')
 
 @bot.event
 async def on_ready():
