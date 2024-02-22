@@ -6,6 +6,7 @@ import discord
 from keep_alive import keep_alive
 from dotenv import load_dotenv,find_dotenv
 
+load_dotenv(find_dotenv())
 
 message_lastseen = datetime.now()
 message2_lastseen = datetime.now()
