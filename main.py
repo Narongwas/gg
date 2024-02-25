@@ -180,13 +180,10 @@ async def history(ctx, *, word: str,channelID):
 @bot.command()
 async def translate(ctx, lang, *, thing):
     """ command to translate . Check !help translate """
-    try:
-        translator = Translator()
-        translation = translator.translate(thing, dest=lang)
-        await ctx.channel.send(f'Translate to {lang}: {translation.text}'
+    translator = Translator()
+    translation = translator.translate(thing, dest=lang)
+    await ctx.channel.send(f'Translate to {lang}: {translation.text}'
                               )     
-    except Exception:
-        await ctx.channel.send(f"Translation failed")
 
 @bot.event
 async def on_message(message):
