@@ -16,7 +16,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-Token = os.environ.get('TOKEN')
+Token = os.getenv('TOKEN')
 
 @bot.event
 async def on_ready():
