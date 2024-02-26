@@ -57,7 +57,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
         await ctx.channel.send(f"Bot doesn't have enough permission to kick someone. Upgrade the Permissions")
 
 @bot.command(name="timeout",help="command to time out ")
-@commands.has_permissions(moderate_members = True)
+@commands.has_permissions(moderate_members=True)
 async def timeout(ctx, member: discord.Member, time, reason=None):
     """ command to timeout user. Check !help timeout """
     try:
@@ -86,7 +86,7 @@ async def timeout(ctx, member: discord.Member, time, reason=None):
         await ctx.channel.send(f"Bot doesn't have enough permission to time out. Upgrade the Permissions")
 
 @bot.command(name="remove timeout",help="command to remove timeout ")
-@commands.has_permissions(moderate_members = True)
+@commands.has_permissions(moderate_members=True)
 async def removetimeout(ctx, member: discord.Member):
     try:
         if not member.is_time_out():
@@ -99,7 +99,7 @@ async def removetimeout(ctx, member: discord.Member):
 
 
 @bot.command(name="addrole",help="command to addrole ")
-@commands.has_permissions(manage_roles = True)
+@commands.has_permissions(manage_roles=True)
 async def addrole(ctx, member: discord.Member,role: discord.Role):
     """ command to addrole . Check !help addrole """
     try:
@@ -110,7 +110,7 @@ async def addrole(ctx, member: discord.Member,role: discord.Role):
         await ctx.channel.send(f"Bot doesn't have enough permission. Upgrade the Permissions")
 
 @bot.command(name="removerole",help="command to removerole ")
-@commands.has_permissions(manage_roles = True)
+@commands.has_permissions(manage_roles=True)
 async def removerole(ctx, member: discord.Member,role: discord.Role):
     """ command to removerole . Check !help removerole """
     try:
@@ -121,7 +121,7 @@ async def removerole(ctx, member: discord.Member,role: discord.Role):
         await ctx.channel.send(f"Bot doesn't have enough permission. Upgrade the Permissions")
 
 @bot.command(name="move",help="command to move user")
-@commands.has_permissions(move_members = True)
+@commands.has_permissions(move_members=True)
 async def move(ctx, member: discord.Member,channelID):
     """ command to move user . Check !help move """
     try:
@@ -133,7 +133,7 @@ async def move(ctx, member: discord.Member,channelID):
         await ctx.channel.send(f"Bot doesn't have enough permission. Upgrade the Permissions")
 
 @bot.command(name="disconnected",help="disconnect user")
-@commands.has_permissions(move_members = True)
+@commands.has_permissions(move_members=True)
 async def disconnect(ctx, member: discord.Member):
     """ command to disconnect . Check !help disconnect """
     try:
@@ -147,7 +147,7 @@ async def disconnect(ctx, member: discord.Member):
 
 
 @bot.command()
-@commands.has_permissions(ban_members = True)
+@commands.has_permissions(ban_members=True)
 async def deafen(ctx, member: discord.Member):
     try:
         role = discord.utils.get(member.server.roles, name='Deafened')
@@ -158,7 +158,7 @@ async def deafen(ctx, member: discord.Member):
         await ctx.channel.send(f"Bot doesn't have enough permission. Upgrade the Permissions")
 
 @bot.command()
-@commands.has_permissions(ban_members = True)
+@commands.has_permissions(ban_members=True)
 async def undeafen(ctx, member: discord.Member):
     try:
         await member.edit(Deafened=False)
@@ -168,7 +168,7 @@ async def undeafen(ctx, member: discord.Member):
         await ctx.channel.send(f"Bot doesn't have enough permission. Upgrade the Permissions")
 
 @bot.command()
-@commands.has_permissions(read_message_history = True)
+@commands.has_permissions(read_message_history=True)
 async def history(ctx, *, word: str,channelID):
     channel = bot.get_channel(channelID)
     messages = await ctx.channel.history(limit=200).flatten()
